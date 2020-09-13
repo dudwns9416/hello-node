@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://@hellomongo.bvkft.mongodb.net/hellomongo?retryWr
 
 
 app.get('/', (req, res) => {
-    res.send('안녕 세상아!')
+    res.send('안녕 세상아! 너도 반갑니?')
 })
 
 app.post('/register', (req, res) => {
