@@ -1,4 +1,6 @@
 .idea/
+dev.js
+
 # Logs
 logs
 *.log
