@@ -52,6 +52,14 @@ userSchema.pre('save', function (next) {
     }
 })
 
+userSchema.methods.comparePasswrod =  function (plainPassword, cb) {
+    //plainPasword <=> 암호화된 비밀번호
+    bcrypt.compare(plainPassword, this.password, function (err, isMatch) {
+        if(err) return cb(err),
+            cb(null, isMatch)
+    })
+}
+
 const User = mongoose.model('User', userSchema)
 
 module.exports = {User}
